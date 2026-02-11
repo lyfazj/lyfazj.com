@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的极客空间</title>
+    <style>
+        /* CSS：负责网页的“皮肤” */
+        body {
+            background-color: #0d1117; /* 深色背景 */
+            color: #c9d1d9; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+            box-shadow: 0 20px 50px rgba(88,166,255,0.2);
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            /* 打字机动画 */
+            overflow: hidden; 
+            white-space: nowrap; 
+            border-right: 3px solid #58a6ff;
+            width: 0;
+            animation: typing 2s steps(15, end) forwards, blink 0.75s infinite;
+        }
+        p { line-height: 1.6; opacity: 0.8; }
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background-color: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: #2ea043; }
+
+        /* 动画逻辑 */
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink { from, to { border-color: transparent } 50% { border-color: #58a6ff } }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hello World!</h1>
+        <p>🚀 欢迎来到我的 .xyz 秘密基地</p>
+        <p>这是我亲手部署的第一个动态网页。</p>
+        <div class="btn" onclick="sayHi()">点我打招呼</div>
+    </div>
+
+    <script>
+        /* JavaScript：负责网页的“动作” */
+        function sayHi() {
+            alert("你好，世界！这是我的第一行 JavaScript 交互代码！🎉");
+        }
+    </script>
+</body>
+</html>
